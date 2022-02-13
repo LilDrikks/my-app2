@@ -1,0 +1,54 @@
+.titleCategory {
+    margin: 5px 0px 0px 50px;
+    font-weight: 600;
+}
+
+.moviesRow {
+    overflow-x: hidden;
+    margin: 0px 0px 20px 40px;
+    display: flex;
+}
+
+.nexButtonMovies {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    border: none;
+    opacity: 0.5;
+    margin-bottom: 5px;
+    background-color: black;
+    height: 252px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: all 0.3s;
+}
+
+.nexButtonMovies:hover {
+    opacity: 0.8;
+    transform: scale(1);
+}
+
+.imgMovie {
+    height: 250px;
+    transform: scale(0.9);
+    transition: all 0.3s;
+    cursor: pointer;
+    box-shadow: 5px 1px 8px black;
+}
+
+.imgMovie:hover {
+    transform: scale(1);
+}
+
+.lineMovies {
+    display: inline-flex;
+}
+
+.lineMoviesMap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: all 1s;
+}

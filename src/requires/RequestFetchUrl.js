@@ -12,52 +12,53 @@ const API_BASE = 'https://api.themoviedb.org/3'
  decumentários
 */
 
-const basicFetch = async (endPoint) => {
+
+//Na moral esse é o melhor codigo que ja vi em aula em questão de funcionalidade e clareza sobre requisição asyncrona
+const basicFetch = async(endPoint) => {
     const req = await fetch(`${API_BASE}${endPoint}`)
     const json = await req.json()
     return json
 }
 
 export default {
-    getHomeList: async () =>{
-        return [
-            {
-                slug:'originals',
+    getHomeList: async() => {
+        return [{
+                slug: 'originals',
                 title: 'Originais netflix',
                 items: await basicFetch(`/discover/tv?with_network=213&api_key=${API_KEY}`)
             },
             {
-                slug:'trending',
+                slug: 'trending',
                 title: 'Recomendados para você',
                 items: await basicFetch(`/trending/all/week?api_key=${API_KEY}`)
             },
             {
-                slug:'toprated',
+                slug: 'toprated',
                 title: 'Filmes em alta',
                 items: await basicFetch(`/movie/top_rated?api_key=${API_KEY}`)
             },
             {
-                slug:'action',
+                slug: 'action',
                 title: 'Ação',
                 items: await basicFetch(`/discover/movie?with_genres=28&api_key=${API_KEY}`)
             },
             {
-                slug:'comedy',
+                slug: 'comedy',
                 title: 'Comédia',
                 items: await basicFetch(`/discover/movie?with_genres=35&api_key=${API_KEY}`)
             },
             {
-                slug:'horror',
+                slug: 'horror',
                 title: 'Terror',
                 items: await basicFetch(`/discover/movie?with_genres=27&api_key=${API_KEY}`)
             },
             {
-                slug:'romance',
+                slug: 'romance',
                 title: 'Romance',
                 items: await basicFetch(`/discover/movie?with_genres=10749&api_key=${API_KEY}`)
             },
             {
-                slug:'documentary',
+                slug: 'documentary',
                 title: 'Documentários',
                 items: await basicFetch(`/discover/movie?with_genres=99&api_key=${API_KEY}`)
             },

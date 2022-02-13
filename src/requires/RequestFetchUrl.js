@@ -20,7 +20,8 @@ const basicFetch = async(endPoint) => {
     return json
 }
 
-export default {
+let objeto
+objeto = {
     getHomeList: async() => {
         return [{
                 slug: 'originals',
@@ -75,9 +76,14 @@ export default {
                     break;
                 case 'tv':
                     info = await basicFetch(`/tv/${banner_id}?api_key=${API_KEY}`)
+                    break;
+                default:
+                    break;
             }
             return info
         }
 
     }
 }
+
+export default objeto

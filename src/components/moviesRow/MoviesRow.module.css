@@ -30,6 +30,21 @@
     transform: scale(1);
 }
 
+.nexButtonMoviesSvg {
+    display: block;
+    text-indent: -9999px;
+    width: 100%;
+    transform: scale(1.5);
+    opacity: 0.3;
+    height: 252px;
+    background: url(arrow_forward_ios_black_24dp.svg) no-repeat center;
+    background-size: 100% 82px;
+}
+
+.nexButtonMoviesSvg:hover {
+    opacity: 1;
+}
+
 .imgMovie {
     height: 250px;
     transform: scale(0.9);

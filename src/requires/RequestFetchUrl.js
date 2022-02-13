@@ -63,5 +63,21 @@ export default {
                 items: await basicFetch(`/discover/movie?with_genres=99&api_key=${API_KEY}`)
             },
         ]
+
+    },
+    getBanner: async(banner_id, type) => {
+        let info = {}
+
+        if (banner_id) {
+            switch (type) {
+                case 'movie':
+                    info = await basicFetch(`/movie/${banner_id}?api_key=${API_KEY}`)
+                    break;
+                case 'tv':
+                    info = await basicFetch(`/tv/${banner_id}?api_key=${API_KEY}`)
+            }
+            return info
+        }
+
     }
 }

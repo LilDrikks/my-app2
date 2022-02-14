@@ -7,4 +7,4 @@ const NextButtonMovies = ({onClick}) => {
         }
 
 
-        export default NextButtonMovies;
+        export default NextButtonMovies;  

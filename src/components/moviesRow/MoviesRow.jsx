@@ -21,8 +21,8 @@ const MoviesRow = ({title, objeto}) => {
             scrollLineX = (window.innerWidth - listWidth) - 50
         }
         
-        setScrollX(scrollLineX)
-    }
+        setScrollX(scrollLineX) 
+    } 
 
     return ( 
         <>

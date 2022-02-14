@@ -7,46 +7,56 @@
     overflow-x: hidden;
     margin: 0px 0px 20px 40px;
     display: flex;
+    transition: all 1s;
+    height: inherit;
 }
 
-.nexButtonMovies {
+
+.nextButtonMovies, .previusButtonMovies {
     position: absolute;
     right: 0;
-    width: 40px;
+    width: 35px;
     border: none;
-    opacity: 0.5;
+    opacity: 0;
     margin-bottom: 5px;
     background-color: black;
-    height: 252px;
+    height: inherit;
     color: white;
     font-weight: 600;
     cursor: pointer;
     transform: scale(0.9);
     transition: all 0.3s;
 }
-
-.nexButtonMovies:hover {
-    opacity: 0.8;
+.previusButtonMovies{
+    z-index: 1;
+    left: 0;
+}
+.moviesRow:hover  .previusButtonMovies , 
+.moviesRow:hover .nextButtonMovies{
+    opacity: 0.5;
     transform: scale(1);
 }
+.moviesRow:hover  .previusButtonMoviesSvg , 
+.moviesRow:hover .nextButtonMoviesSvg{
+    opacity: 1;
+}
 
-.nexButtonMoviesSvg {
+.nextButtonMoviesSvg, .previusButtonMoviesSvg{
     display: block;
     text-indent: -9999px;
     width: 100%;
     transform: scale(1.5);
-    opacity: 0.3;
-    height: 252px;
+    height: inherit;
     background: url(arrow_forward_ios_black_24dp.svg) no-repeat center;
-    background-size: 100% 82px;
+}
+.previusButtonMoviesSvg{
+    transform: scale(1.5) rotate(180deg);
 }
 
-.nexButtonMoviesSvg:hover {
-    opacity: 1;
-}
 
 .imgMovie {
     height: 250px;
+    width: 166px;
     transform: scale(0.9);
     transition: all 0.3s;
     cursor: pointer;

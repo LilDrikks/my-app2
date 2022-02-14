@@ -1,8 +1,8 @@
-import styles from './MoviesRow.module.css'
+import styles from './MoviesRow.module.scss'
 
-const NextButtonMovies = () => {
-        return ( <button className={styles.nexButtonMovies}>
-                <img src="./arrow_forward_ios_black_24dp.svg" alt="" className={styles.nexButtonMoviesSvg}/> 
+const NextButtonMovies = ({onClick}) => {
+        return ( <button onClick={onClick} className={styles.nextButtonMovies}>
+                <img src="./arrow_forward_ios_black_24dp.svg" alt="" className={styles.nextButtonMoviesSvg}/> 
         </button>);
         }
 

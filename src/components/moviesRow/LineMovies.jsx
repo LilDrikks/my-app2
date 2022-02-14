@@ -1,9 +1,7 @@
 import Movies from "./Movies";
-import styles from './MoviesRow.module.css'
+import styles from './MoviesRow.module.scss'
 
 const LineMovies = ({objeto}) => {
-
-  
 
     return ( 
         <div className={styles.lineMovies}>

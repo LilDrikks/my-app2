@@ -1,4 +1,4 @@
-import styles from './MoviesRow.module.css'
+import styles from './MoviesRow.module.scss'
 
 const Movies = ({src, alt}) => {
     return ( 

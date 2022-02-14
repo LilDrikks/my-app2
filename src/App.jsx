@@ -21,17 +21,12 @@ function App() {
             setBanner(randomFetch)
         }
         loadAll()
-        
-        
-
     }, []);
 
     return ( 
     <>
         <div className="App">
         {loadBanner && <Banner  item={loadBanner} />}
-
-
         <div>
             {
                 loadAllMoviesAndSeries.map((item, key) => <MoviesRow key={key} title={item.title} objeto={item.items} />)

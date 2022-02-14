@@ -1,17 +1,18 @@
 import Movies from "./Movies";
 import styles from './MoviesRow.module.scss'
 
-const LineMovies = ({objeto}) => {
- 
-    return ( 
+const LineMovies = ({ objeto }) => {
+    let vw = window.innerWidth
+    console.log(vw)
+    return (
         <div className={styles.lineMovies}>
-        {objeto.results.map((item, key) =>( 
-        <div key={key} className={styles.lineMoviesMap}>
-            <Movies  src={`https://image.tmdb.org/t/p/w300${item.poster_path}`}  alt={item.title === undefined ? item.name : item.title} />
+            {objeto.results.map((item, key) => (
+                <div key={key} className={styles.lineMoviesMap}>
+                    <Movies src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.title === undefined ? item.name : item.title} />
+                </div>
+            ))}
         </div>
-        ) )}
-        </div>
-     )
+    )
 }
- 
+
 export default LineMovies;

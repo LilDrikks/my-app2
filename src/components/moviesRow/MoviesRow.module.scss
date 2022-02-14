@@ -4,9 +4,11 @@
     justify-content: center;
     transition: all 1s;
 }
+
 .lineMovies {
     display: inline-flex;
 }
+
 .titleCategory {
     margin: 5px 0px 0px 50px;
     font-weight: 600;
@@ -18,10 +20,12 @@
     display: flex;
     transition: all 1s;
     height: inherit;
+    align-items: center;
+    width: 3400px;
 }
 
-
-.nextButtonMovies, .previusButtonMovies {
+.nextButtonMovies,
+.previusButtonMovies {
     position: absolute;
     right: 0;
     width: 35px;
@@ -29,28 +33,33 @@
     opacity: 0;
     margin-bottom: 5px;
     background-color: black;
-    height: 250px;
+    height: 200px;
     color: white;
     font-weight: 600;
     cursor: pointer;
     transform: scale(0.9);
     transition: all 0.3s;
+    border-radius: 5px;
 }
-.previusButtonMovies{
+
+.previusButtonMovies {
     z-index: 1;
     left: 0;
 }
-.moviesRow:hover  .previusButtonMovies , 
-.moviesRow:hover .nextButtonMovies{
+
+.moviesRow:hover .previusButtonMovies,
+.moviesRow:hover .nextButtonMovies {
     opacity: 0.5;
     transform: scale(1);
 }
-.moviesRow:hover  .previusButtonMoviesSvg , 
-.moviesRow:hover .nextButtonMoviesSvg{
+
+.moviesRow:hover .previusButtonMoviesSvg,
+.moviesRow:hover .nextButtonMoviesSvg {
     opacity: 1;
 }
 
-.nextButtonMoviesSvg, .previusButtonMoviesSvg{
+.nextButtonMoviesSvg,
+.previusButtonMoviesSvg {
     display: block;
     text-indent: -9999px;
     width: 100%;
@@ -58,10 +67,10 @@
     height: inherit;
     background: url(arrow_forward_ios_black_24dp.svg) no-repeat center;
 }
-.previusButtonMoviesSvg{
+
+.previusButtonMoviesSvg {
     transform: scale(1.5) rotate(180deg);
 }
-
 
 .imgMovie {
     height: 250px;
@@ -75,4 +84,3 @@
 .imgMovie:hover {
     transform: scale(1);
 }
-

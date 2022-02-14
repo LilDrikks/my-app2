@@ -7,11 +7,11 @@ const NextButtonMovies = ({scrollX, setScrollX}) => {
                    scrollLineX = 40
                }
                setScrollX(scrollLineX)
-           }
+           } 
         return ( <button onClick={handleClickPrevius} className={styles.previusButtonMovies}>
                 <img src="./arrow_forward_ios_black_24dp.svg" alt="" className={styles.previusButtonMoviesSvg}/> 
         </button>);
         }
-
+ 
 
         export default NextButtonMovies;

@@ -1,3 +1,12 @@
+.lineMoviesMap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: all 1s;
+}
+.lineMovies {
+    display: inline-flex;
+}
 .titleCategory {
     margin: 5px 0px 0px 50px;
     font-weight: 600;
@@ -67,13 +76,3 @@
     transform: scale(1);
 }
 
-.lineMovies {
-    display: inline-flex;
-}
-
-.lineMoviesMap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    transition: all 1s;
-}

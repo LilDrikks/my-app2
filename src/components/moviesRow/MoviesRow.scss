@@ -12,7 +12,6 @@
 .titleCategory {
     margin: 5px 0px 0px 50px;
     font-weight: 600;
-    font-size: 20px;
 }
 
 .moviesRow {
@@ -41,6 +40,10 @@
     transform: scale(0.9);
     transition: all 0.3s;
     border-radius: 5px;
+}
+
+.slideLeft {
+    transform: translateX(100);
 }
 
 .previusButtonMovies {

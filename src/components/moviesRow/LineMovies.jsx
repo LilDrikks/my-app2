@@ -2,8 +2,6 @@ import Movies from "./Movies";
 import styles from './MoviesRow.module.scss'
 
 const LineMovies = ({ objeto }) => {
-    let vw = window.innerWidth
-    console.log(vw)
     return (
         <div className={styles.lineMovies}>
             {objeto.results.map((item, key) => (

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import objeto from './requires/RequestFetchUrl';
 import React from 'react';
 import MoviesRow from './components/moviesRow/MoviesRow';
-import Banner from './components/Banner';
+import Banner from './components/SectionBanner';
 
 
 function App() {

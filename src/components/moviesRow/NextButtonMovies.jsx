@@ -4,7 +4,7 @@ const NextButtonMovies = ({objeto,scrollX, setScrollX}) => {
 
         const handleClickNext = () => {
                 let scrollLineX = scrollX - Math.round(window.innerWidth / 2)
-                let listWidth = objeto.results.length * 166
+                let listWidth = objeto.results.length * 150
                 //usei o state para verificar se ele é menor que o tamanho da lista + metade da tela - tela toda
                 //scrollX < 3320 - 
                 if (scrollX < (window.innerWidth - listWidth + Math.round(window.innerWidth / 2))) {

@@ -1,7 +1,7 @@
 .banner {
     width: 100%;
     margin-bottom: 40px;
-    height: 70vh;
+    height: 100%;
     .title {
         font-size: 80px;
         width: 50%;
@@ -9,17 +9,43 @@
         margin-left: 40px;
         padding-top: 80px;
     }
-    .vote {
-        margin: 20px 0px 0px 40px;
-        width: 40%;
+    .infoBanner {
+        display: flex;
+    }
+    .vote,
+    .year,
+    .season {
         font-weight: 600;
         font-size: 24px;
+    }
+    .vote {
+        margin: 20px 0px 0px 40px;
+        width: 105px;
+        color: rgb(95, 209, 95);
+    }
+    .year {
+        margin: 20px 0px 0px 20px;
+        width: 55px;
+    }
+    .season {
+        margin: 20px 0px 0px 20px;
+        width: 120px;
     }
     .overview {
         margin: 10px 0px 0px 40px;
         width: 500px;
-        font-weight: 400;
-        font-size: 20px;
+    }
+    .divGenres {
+        display: flex;
+        margin-left: 42px;
+        margin-top: 10px;
+        align-items: center;
+        font-size: 14px;
+        color: red;
+    }
+    .genres {
+        margin: 5px;
+        color: white;
     }
     .buttons {
         margin: 20px 0px 0px 40px;
@@ -28,7 +54,6 @@
             transform: scale(0.95);
             display: flex;
             align-items: center;
-            justify-content: center;
             height: 40px;
             font-size: 16px;
             font-weight: 600;
@@ -65,28 +90,53 @@
         height: 100%;
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8) 5%, transparent 95%);
     }
-    @media (max-width: 500px) {
+    @media (max-width: 750px),
+    ( max-height: 575px) {
         .title {
-            width: 80%;
             font-size: 40px;
-            margin-left: 25px;
             padding-top: 40px;
         }
         .vote {
             font-size: 18px;
-            margin-left: 25px;
+            width: 80px;
+        }
+        .year {
+            font-size: 18px;
+            width: 45px;
+        }
+        .season {
+            font-size: 18px;
         }
         .overview {
             font-size: 16px;
-            width: 340px;
+            width: 80%;
+        }
+        .buttons,
+        .divGenres,
+        .overvie,
+        .vote,
+        .title,
+        .overview {
             margin-left: 25px;
         }
-        .buttons {
-            margin-left: 25px;
+    }
+    @media (max-width: 750px) {
+        .buttons button {
+            padding: 10px 10px 10px 10px;
+            .cgPlayIcon {
+                font-size: 40px;
+                margin-left: -15px;
+                margin-right: -5px;
+            }
+            .cgInfoIcon {
+                font-size: 20px;
+                margin-right: 10px;
+            }
         }
-        .banner {
-            height: 40vh;
-            color: wheat;
+    }
+    @media (max-width: 1051px) {
+        .title {
+            width: 80%;
         }
     }
 }

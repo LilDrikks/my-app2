@@ -1,0 +1,37 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    transition: all 0.5s ease;
+}
+
+.headerBlack {
+    transition: all 0.5s ease;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    background-color: black;
+}
+
+.paddingHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+}
+
+.logo {
+    color: red;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 20px 0px;
+}
+
+.user {
+    width: 35px;
+    height: 35px;
+    background-image: url(https://occ-0-185-1123.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdadFY5H1dRsUl7R3ol6ZIwUrkIWf0vJWDIPNQ2CefFBwhZ8utJ7J7bCIrqJAX97rGLlWrbMGezxI_9lASukdDj49xkx.png?r=9cc);
+    background-size: cover;
+}

@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react';
 import objeto from './requires/RequestFetchUrl';
 import React from 'react';
 import MoviesRow from './components/moviesRow/MoviesRow';
-import Banner from './components/Banner/SectionBanner';
+import SectionBanner from './components/Banner/SectionBanner';
+import Header from './components/Header/Header';
 
 
 function App() {
     const [loadAllMoviesAndSeries, setloadAllMoviesAndSeries] = useState([])
     const[loadBanner, setBanner] = useState(null)
+    const[headerBlack, setHeaderBlack] = useState(false)
     useEffect(() => {
         const loadAll = async() => {
             //pegando a lista de filmes no arquivo RequestFetchUrl a função getHomeList
@@ -23,10 +25,27 @@ function App() {
         loadAll()
     }, []);
 
+    useEffect(() => {
+        const handleScrollWindow = () => {
+            if(window.scrollY > 10){
+                setHeaderBlack(true)
+            }else{
+                setHeaderBlack(false)
+            }
+        }
+        window.addEventListener('scroll', handleScrollWindow)
+
+        return () => {
+            
+            window.removeEventListener('scroll', handleScrollWindow)
+        };
+    }, [headerBlack]);
+
     return ( 
     <>
         <div className="App">
-        {loadBanner && <Banner  item={loadBanner} />}
+            <Header headerBlack={headerBlack} />
+        {loadBanner && <SectionBanner  item={loadBanner} />}
         <div>
             {
                 loadAllMoviesAndSeries.map((item, key) => <MoviesRow key={key} title={item.title} objeto={item.items} />)

@@ -7,7 +7,7 @@ import ButtonsBanner from './ButtonsBanner';
 import GradientBanner from './GradientBanner';
 import GenresBanners from './GenresBanner';
 
-const Banner = ({ item }) => {
+const SectionBanner = ({ item }) => {
     let bannerImage 
 
     if(item.backdrop_path){
@@ -36,4 +36,4 @@ const Banner = ({ item }) => {
     );
 }
 
-export default Banner;
+export default SectionBanner;

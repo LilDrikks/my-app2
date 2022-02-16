@@ -23,3 +23,12 @@ span {
     margin: 0;
     padding: 0;
 }
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.loading img{
+    width: 100vw;
+}

@@ -4,8 +4,7 @@ import React from 'react';
 import MoviesRow from './components/moviesRow/MoviesRow';
 import SectionBanner from './components/Banner/SectionBanner';
 import Header from './components/Header/Header';
-
-
+import './index.css'
 function App() {
     const [loadAllMoviesAndSeries, setloadAllMoviesAndSeries] = useState([])
     const[loadBanner, setBanner] = useState(null)
@@ -14,7 +13,7 @@ function App() {
         const loadAll = async() => {
             //pegando a lista de filmes no arquivo RequestFetchUrl a função getHomeList
             let list = await objeto.getHomeList()
-            setloadAllMoviesAndSeries(list)
+           setloadAllMoviesAndSeries(list)
 
             let originals = list.filter(i => i.slug === 'originals')
             let randomOriginals = Math.floor(Math.random() * (originals[0].items.results.length -1))
@@ -52,6 +51,11 @@ function App() {
             }
         </div>
     </div>
+    {loadAllMoviesAndSeries.length <=0 &&
+        <div className='loading'>
+            <img src='https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif' />
+        </div>
+    }
 </>
 );
 }

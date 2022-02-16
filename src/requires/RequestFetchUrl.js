@@ -25,7 +25,7 @@ objeto = {
     getHomeList: async() => {
         return [{
                 slug: 'originals',
-                title: 'Originais netflix',
+                title: 'Originais cloneflix',
                 items: await basicFetch(`/discover/tv?with_network=213&api_key=${API_KEY}`)
             },
             {

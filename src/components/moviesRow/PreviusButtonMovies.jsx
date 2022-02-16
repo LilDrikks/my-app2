@@ -1,5 +1,7 @@
 import styles from './MoviesRow.module.scss'
 
+import {BsFillArrowLeftCircleFill} from 'react-icons/bs'
+
 const NextButtonMovies = ({scrollX, setScrollX}) => {
         const handleClickPrevius = () => {
                 let scrollLineX = scrollX + Math.round(window.innerWidth / 2)
@@ -10,7 +12,7 @@ const NextButtonMovies = ({scrollX, setScrollX}) => {
                setScrollX(scrollLineX)
            } 
         return ( <button onClick={handleClickPrevius} className={styles.previusButtonMovies}>
-                
+                <BsFillArrowLeftCircleFill  className={styles.previusButtonMoviesIco}/>
         </button>);
         }
  

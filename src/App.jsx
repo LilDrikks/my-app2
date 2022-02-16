@@ -1,10 +1,17 @@
-import { useEffect, useState } from 'react';
-import objeto from './requires/RequestFetchUrl';
-import React from 'react';
-import MoviesRow from './components/moviesRow/MoviesRow';
-import SectionBanner from './components/Banner/SectionBanner';
-import Header from './components/Header/Header';
 import './index.css'
+
+import { useEffect, useState } from 'react';
+import React from 'react';
+
+import objeto from './requires/RequestFetchUrl';
+
+import Header from './components/Header/Header';
+import SectionBanner from './components/Banner/SectionBanner';
+import MoviesRow from './components/moviesRow/MoviesRow';
+import Footer from './components/Footer/Footer';
+
+
+
 function App() {
     const [loadAllMoviesAndSeries, setloadAllMoviesAndSeries] = useState([])
     const[loadBanner, setBanner] = useState(null)
@@ -56,6 +63,7 @@ function App() {
             <img src='https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif' />
         </div>
     }
+    <Footer />
 </>
 );
 }

@@ -21,9 +21,7 @@ const SectionBanner = ({ item }) => {
 
     return (
         <section className={styles.banner} style={{
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundImage: `url('https://image.tmdb.org/t/p/original${bannerImage}')`
+            backgroundImage: `url('https://image.tmdb.org/t/p/original${bannerImage}')`,
         }}>
             <GradientBanner>
             <TitleBanner item={item} />
